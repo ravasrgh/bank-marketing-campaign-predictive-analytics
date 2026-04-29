@@ -1,0 +1,81 @@
+{
+  "project": "BSM Bank Marketing -- Prediksi Deposito Berjangka",
+  "model_name": "LightGBM",
+  "resampler": "ROS",
+  "data_version": "v1",
+  "trained_on": "29,668 baris",
+  "n_features_input": 18,
+  "n_features_encoded": 61,
+  "threshold_f2": 0.46,
+  "threshold_profit": 0.44,
+  "metrics_test": {
+    "f2_score": 0.5537,
+    "recall": 0.6641,
+    "precision": 0.3326,
+    "roc_auc": 0.7924
+  },
+  "business_impact": {
+    "cost_fn_rp": 500000,
+    "cost_fp_rp": 50000,
+    "net_savings_test_rp": 112050000.0,
+    "roi_pct": 34.43,
+    "calls_reduction_pct": 73.82
+  },
+  "encoding": {
+    "ordinal": [],
+    "onehot": [
+      "education",
+      "job",
+      "marital",
+      "default",
+      "housing",
+      "loan",
+      "contact",
+      "month",
+      "day_of_week",
+      "poutcome"
+    ],
+    "numeric": [
+      "age",
+      "previous",
+      "emp.var.rate",
+      "cons.price.idx",
+      "cons.conf.idx",
+      "euribor3m",
+      "nr.employed",
+      "was_contacted_before"
+    ]
+  },
+  "top5_benchmark": [
+    {
+      "rank": 1,
+      "model": "GradientBoosting",
+      "resampler": "ROS",
+      "f2_cv": 0.5561
+    },
+    {
+      "rank": 2,
+      "model": "LightGBM",
+      "resampler": "ROS",
+      "f2_cv": 0.5535
+    },
+    {
+      "rank": 3,
+      "model": "GradientBoosting",
+      "resampler": "RUS",
+      "f2_cv": 0.5531
+    },
+    {
+      "rank": 4,
+      "model": "LightGBM",
+      "resampler": "RUS",
+      "f2_cv": 0.5465
+    },
+    {
+      "rank": 5,
+      "model": "LogisticRegression",
+      "resampler": "SMOTETomek",
+      "f2_cv": 0.5437
+    }
+  ]
+}
