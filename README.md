@@ -8,6 +8,9 @@
 ![imbalanced-learn](https://img.shields.io/badge/imbalanced--learn-Resampling-orange?style=for-the-badge)
 
 ---
+## Link Tableau: <https://public.tableau.com/app/profile/yosef.ivander3780/viz/AnalisisKonversiDepositoNasabah/AnalisisKonversiDepositoNasabah?publish=yes>
+
+## Dataset source: <https://www.kaggle.com/datasets/volodymyrgavrysh/bank-marketing-campaigns-dataset>
 
 ## Table of Contents
 
