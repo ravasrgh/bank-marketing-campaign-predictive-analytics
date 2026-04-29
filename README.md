@@ -193,7 +193,7 @@ Tuning     : RandomizedSearchCV (50 iterations, 5-Fold CV)
 
 The F2-Score gives 2x weight to Recall over Precision. This means the model is penalized more heavily for missing actual subscribers (FN) than for making wasted calls (FP). This is aligned with our business priority of catching every potential subscriber.
 
-**Why not pure Recall?** Maximizing Recall alone would push the model to predict *everyone* as "Subscribe", 100% Recall but ~0% Precision, which would mean calling all 41K customers -- defeating the purpose of a predictive model. F2-Score ensures balance while still prioritizing Recall.
+**Why not pure Recall?** Maximizing Recall alone would push the model to predict *everyone* as "Subscribe", 100% Recall but ~0% Precision, which would mean calling all 41K customers, defeating the purpose of a predictive model. F2-Score ensures balance while still prioritizing Recall.
 
 ### Dual Threshold Optimization
 
@@ -210,7 +210,7 @@ Profit-optimized threshold         : 0.43
 
 | Metric | Value | Interpretation |
 |---|---|---|
-| **F2-Score** | 0.5669 | Primary metric -- weighted towards catching subscribers |
+| **F2-Score** | 0.5669 | Primary metric, weighted towards catching subscribers |
 | **Recall** | 63.4% | Proportion of actual subscribers detected |
 | **Precision** | 39.9% | Proportion of predicted subscribers that are real |
 | **ROC-AUC** | 0.8050 | Strong discrimination ability across all thresholds |
@@ -228,17 +228,17 @@ SHAP (SHapley Additive exPlanations) analysis reveals which features **most infl
 
 ### Top Predictive Features
 
-1. **Euribor 3-Month Rate (`euribor3m`)**: The strongest predictor. Lower interbank rates correlate with higher subscription rates -- when traditional savings yield less, customers seek term deposits for better returns.
+1. **Euribor 3-Month Rate (`euribor3m`)**: The strongest predictor. Lower interbank rates correlate with higher subscription rates. When traditional savings yield less, customers seek term deposits for better returns.
 
 2. **Number of Employees (`nr.employed`)**: Macro-economic proxy. Lower employment numbers indicate economic uncertainty, pushing customers toward safe deposit instruments.
 
-3. **Previous Campaign Outcome (`poutcome`)**: Customers who subscribed in a previous campaign have >65% conversion rate -- the ultimate "low-hanging fruit" for telemarketing.
+3. **Previous Campaign Outcome (`poutcome`)**: Customers who subscribed in a previous campaign have >65% conversion rate. The ultimate "low-hanging fruit" for telemarketing.
 
 4. **Contact Type (`contact`)**: Cellular contact achieves 2x higher conversion than landline. Mobile users are more accessible and responsive.
 
-5. **Age (`age`)**: Students (<25) and retirees (>65) show the highest subscription rates, but for different reasons -- students seek first-time savings products, retirees seek stable income.
+5. **Age (`age`)**: Students (<25) and retirees (>65) show the highest subscription rates, but for different reasons. Students seek first-time savings products, retirees seek stable income.
 
-6. **Campaign Contacts (`campaign`)**: More is not better. Beyond 5-6 contacts, conversion rate drops -- aggressive calling is counterproductive.
+6. **Campaign Contacts (`campaign`)**: More is not better. Beyond 5-6 contacts, conversion rate drops. Aggressive calling is counterproductive.
 
 These insights directly inform the business recommendations below. They're not just statistical curiosities, they're actionable intelligence for the Marketing and Telemarketing teams.
 
@@ -249,7 +249,7 @@ These insights directly inform the business recommendations below. They're not j
 ### For the Telemarketing Operations Team
 
 1. **Tiered Priority Calling List**
-   - Tier 1: Customers with `poutcome=success` + cellular contact -- conversion rate >65%
+   - Tier 1: Customers with `poutcome=success` + cellular contact, conversion rate >65%
    - Tier 2: Students/retirees with higher education, no active loans
    - Tier 3: All other customers predicted positive by the model
 
@@ -269,7 +269,7 @@ These insights directly inform the business recommendations below. They're not j
 
 5. **Macro-Economic Triggers**
    - Monitor JIBOR rates and employment indicators
-   - When rates drop or employment weakens, intensify deposit campaigns -- customers are more receptive
+   - When rates drop or employment weakens, intensify deposit campaigns 
 
 6. **Segment-Specific Scripting**
    - Develop tailored scripts for Tier 1 (emphasize loyalty rewards) vs Tier 2 (emphasize security/stability)
