@@ -27,6 +27,13 @@
 
 ---
 
+By : Group Beta (JCDSAHSR-004)
+- Rava Khoman Tuah Saragih
+- Utari Anggraini
+- Yosef Ivander Setiana
+
+---
+
 ## Project Introduction
 
 **PT Bank Sentral Merakyat (BSM)** is a commercial bank operating in the Indonesian market. Post-pandemic (2021-2023), Bank Indonesia aggressively raised its benchmark interest rate from 3.5% to 6.0% to curb inflation, making term deposits attractive again as an investment instrument.
