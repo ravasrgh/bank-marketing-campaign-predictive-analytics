@@ -10,6 +10,8 @@
 ---
 ## Link Tableau: <https://public.tableau.com/app/profile/yosef.ivander3780/viz/AnalisisKonversiDepositoNasabah/AnalisisKonversiDepositoNasabah?publish=yes>
 
+## Link Streamlit: <https://bsm-bank-marketing-campaign-predictive-analytics.streamlit.app/>
+
 ## Dataset source: <https://www.kaggle.com/datasets/volodymyrgavrysh/bank-marketing-campaigns-dataset>
 
 ## Table of Contents
